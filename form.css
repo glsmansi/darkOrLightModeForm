@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Muli&display=swap");
+* {
+  box-sizing: border-box;
+}
+:root {
+  /* color */
+  --primary-color: #000;
+  /* background-color */
+  --secondary-color: #fff;
+}
+
+html.dark {
+  --primary-color: #fff;
+  --secondary-color: #000;
+}
+
+html.dark {
+  background-color: #333;
+  color: var(--primary-color);
+}
+
+body {
+  background-color: var(--secondary-color);
+  font-family: "Muli", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+  transition: all 0.5s ease-in;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.toggle {
+  margin-bottom: 100px;
+  padding: 10px;
+  border-radius: 20px;
+  width: 10rem;
+  font-size: 16px;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  cursor: pointer;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  border-radius: 50px;
+  padding: 30px;
+}
+
+input {
+  margin: 1rem 3rem;
+  padding: 10px;
+  border: 0;
+  border-bottom: 2px solid var(--primary-color);
+  border-radius: 10px;
+  text-align: center;
+  color: var(--primary-color);
+  font-size: 16px;
+  background-color: var(--secondary-color);
+}
+
+input:focus {
+  outline: none;
+}
+
+.btn {
+  transform: scale(0.98);
+  cursor: pointer;
+  margin: 1rem 3rem;
+  padding: 10px;
+  border-radius: 10px;
+  color: var(--secondary-color);
+  font-size: 16px;
+  width: 100px;
+  background-color: var(--primary-color);
+}
+
+input::placeholder {
+  color: var(--primary-color);
+}
+
+button .circle {
+  position: absolute;
+  background-color: var(--secondary-color);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  animation: scale 0.5s ease-out;
+}
+
+@keyframes scale {
+  to {
+    transform: translate(-50%, -50%) scale(3);
+    opacity: 0;
+  }
+}

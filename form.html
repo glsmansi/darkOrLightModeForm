@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="form.css" />
+    <title>Form</title>
+  </head>
+  <body>
+    <div class="container">
+      <button class="toggle">Dark Mode</button>
+      <form action="succesful.html" class="form" method="get">
+        <input type="text" placeholder="Username" autocomplete="off" required />
+        <input type="email" placeholder="Email" autocomplete="off" required />
+        <input
+          type="password"
+          placeholder="Password"
+          autocomplete="off"
+          minlength="8"
+          required
+        />
+        <input
+          type="password"
+          placeholder="Confirm Password"
+          autocomplete="off"
+          required
+        />
+        <button type="submit" class="btn">Submit</button>
+      </form>
+    </div>
+    <script src="form.js"></script>
+  </body>
+</html>
